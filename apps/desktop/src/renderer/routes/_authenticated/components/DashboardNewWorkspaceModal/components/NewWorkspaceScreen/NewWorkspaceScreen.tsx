@@ -1105,7 +1105,10 @@ export function NewWorkspaceScreen({
 										onSelectCheckout={(checkout) => updateDraft({ checkout })}
 									/>
 									{draft.checkout === "worktree" && (
-										<CompareBaseBranchPicker {...pickerProps} />
+										<CompareBaseBranchPicker
+											{...pickerProps}
+											onChangeProjectLocation={handleGoToSetup}
+										/>
 									)}
 								</>
 							)}
